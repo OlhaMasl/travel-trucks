@@ -1,3 +1,5 @@
 .catalogWrp {
     padding: 64px;
+    display: flex;
+    gap: 64px;
 }

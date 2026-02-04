@@ -5,6 +5,7 @@ import { getTrucks } from '@/lib/api';
 import { keepPreviousData, useQuery } from '@tanstack/react-query';
 import css from './CatalogPage.client.module.css';
 import { useFilterData } from '@/lib/store/filterStore';
+import TruckList from '@/components/TruckList/TruckList';
 
 interface CatalogPageClientProps {
     page: number;
@@ -30,6 +31,7 @@ console.log(data?.items);
 
 return (<div className={css.catalogWrp}>
     <FiltersBlock/>
+    <TruckList trucks={data.items}/>
 </div>)
 };
 
