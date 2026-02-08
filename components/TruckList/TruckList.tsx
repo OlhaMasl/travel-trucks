@@ -1,4 +1,6 @@
 import type { Truck } from "@/types/trucks";
+import Image from 'next/image';
+import css from "./TruckList.module.css";
 
 interface TruckListProps {
 trucks:Truck[];
@@ -7,18 +9,36 @@ trucks:Truck[];
 const TruckList = ({trucks}: TruckListProps) => {
   return (
    <ul>
-    {trucks.map((truck) => (<li key={truck.id}>
-        <img src={truck.gallery[0].thumb} alt="truck picture"/>
-        <div>
-            <h2>{truck.name}</h2>
-            <p>{truck.price}</p>
+    {trucks.map((truck) => (<li key={truck.id} className={css.truckCard}>
+        <div className={css.imgWrp}>
+        <Image src={truck.gallery[0].thumb} alt="truck picture" width={564} height={320} className={css.img}/>
         </div>
-        <div>
+
+        <div className={css.truckInfo}>
+        <div className={css.truckNamePrice}>
+            <h2 className={css.NamePrice}> {truck.name}</h2>
+            <p className={css.NamePrice}>&euro;{truck.price.toFixed(2)}</p>
+        </div>
+        <div className={css.truckReviewsLocation}>
             <div>{`${truck.rating} (${truck.reviews.length} Reviews)`}</div>
              <div>{truck.location}</div>
         </div>
-        <p>{truck.description}</p>
-        <button>Show more</button>
+        <p className={css.description}>{`${truck.description.slice(0, 62)}...`}</p>
+
+    <ul className={css.optionList}>
+        {truck.transmission === "automatic" && <li  className={css.optionItem}>Automatic</li>}
+        {truck.AC && <li className={css.optionItem}>AC</li>}
+        {truck.engine === "petrol" && <li className={css.optionItem}>Petrol</li>}
+        {truck.kitchen && <li className={css.optionItem}>Kitchen</li>}
+        {truck.radio && <li className={css.optionItem}>Radio</li>}
+        {truck.bathroom && <li className={css.optionItem}>Bathroom</li>}
+        {truck.refrigerator && <li className={css.optionItem}>Refrigerator</li>}
+        {truck.microwave && <li className={css.optionItem}>Microwave</li>}
+        {truck.gas && <li className={css.optionItem}>Gas</li>}
+        {truck.water && <li className={css.optionItem}>Water</li>}
+    </ul>
+        <button className={css.btn}>Show more</button>
+        </div>
         </li>))}
    </ul>
   )
