@@ -37,7 +37,7 @@ const TruckList = ({trucks}: TruckListProps) => {
         {truck.gas && <li className={css.optionItem}>Gas</li>}
         {truck.water && <li className={css.optionItem}>Water</li>}
     </ul>
-        <button className={css.btn}>Show more</button>
+        <button  type="button" className={css.btn}>Show more</button>
         </div>
         </li>))}
    </ul>
