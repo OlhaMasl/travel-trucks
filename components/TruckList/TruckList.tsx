@@ -1,6 +1,7 @@
 import type { Truck } from "@/types/trucks";
 import Image from 'next/image';
 import css from "./TruckList.module.css";
+import { Icon } from "../ui/Icon/Icon";
 
 interface TruckListProps {
 trucks:Truck[];
@@ -26,17 +27,29 @@ const TruckList = ({trucks}: TruckListProps) => {
         <p className={css.description}>{`${truck.description.slice(0, 62)}...`}</p>
 
     <ul className={css.optionList}>
-        {truck.transmission === "automatic" && <li  className={css.optionItem}>Automatic</li>}
-        {truck.AC && <li className={css.optionItem}>AC</li>}
-        {truck.engine === "petrol" && <li className={css.optionItem}>Petrol</li>}
-        {truck.kitchen && <li className={css.optionItem}>Kitchen</li>}
-        {truck.radio && <li className={css.optionItem}>Radio</li>}
-        {truck.bathroom && <li className={css.optionItem}>Bathroom</li>}
-        {truck.refrigerator && <li className={css.optionItem}>Refrigerator</li>}
-        {truck.microwave && <li className={css.optionItem}>Microwave</li>}
-        {truck.gas && <li className={css.optionItem}>Gas</li>}
-        {truck.water && <li className={css.optionItem}>Water</li>}
+
+        {truck.transmission === "automatic" && <li  className={css.optionItem}>         <Icon name={'icon-diagram'} width={20} height={20} />Automatic</li>}
+
+        {truck.AC && <li className={css.optionItem}><Icon name={'icon-wind'} width={20} height={20} />AC</li>}
+
+        {truck.engine === "petrol" && <li className={css.optionItem}><Icon name={"icon-fuel-pump"} width={20} height={20} />Petrol</li>}
+
+        {truck.kitchen && <li className={css.optionItem}><Icon name={"icon-cup-hot"} width={20} height={20} />Kitchen</li>}
+
+        {truck.radio && <li className={css.optionItem}><Icon name={"icon-radio"} width={20} height={20} />Radio</li>}
+
+        {truck.bathroom && <li className={css.optionItem}><Icon name={"icon-shower"} width={20} height={20} />Bathroom</li>}
+
+        {truck.refrigerator && <li className={css.optionItem}><Icon name={"icon-fridge"} width={20} height={20} />Refrigerator</li>}
+
+        {truck.microwave && <li className={css.optionItem}><Icon name={"icon-microwave"} width={20} height={20} color="#FFFFFF"/>Microwave</li>}
+
+        {truck.gas && <li className={css.optionItem}><Icon name={"icon-gas-stove"} width={20} height={20} />Gas</li>}
+
+        {truck.water && <li className={css.optionItem}><Icon name={"icon-water"} width={20} height={20} />Water</li>}
+
     </ul>
+
         <button  type="button" className={css.btn}>Show more</button>
         </div>
         </li>))}

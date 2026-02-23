@@ -1,6 +1,6 @@
 .truckCard {
     max-width: 888px;
-    max-height: 368px;
+    max-height: 516px;
     border: 1px solid var(--gray-light);
     border-radius: 20px;
     padding: 24px;
@@ -17,7 +17,7 @@
 }
 
 .img {
-    max-width: 100%;
+max-width: 100%;
   max-height: 100%;
   object-fit: cover;   
   object-position: center; 

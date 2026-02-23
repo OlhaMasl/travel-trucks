@@ -21,11 +21,11 @@ export const Icon = ({
     width={width}
     height={height}
     fill={color}
-    style={style}
+    style={style }
     aria-hidden="true"
     onClick={() => action?.()}
     className={css.icon}
   >
-    <use href={`/sprite.svg#${name}`} />
+    <use href={`/icon-sprite.svg#${name}`} />
   </svg>
 );

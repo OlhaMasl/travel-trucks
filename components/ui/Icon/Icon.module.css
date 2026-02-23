@@ -1,8 +1,9 @@
 .icon {
+fill: currentColor;
+  stroke: currentColor;
+  flex-shrink: 0;
   cursor: pointer;
-
   transition: all 0.2s ease-in-out;
-
   min-width: 16px;
   min-height: 16px;
 }

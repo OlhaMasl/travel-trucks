@@ -2,6 +2,7 @@ import { Formik, Form, Field, FormikHelpers } from "formik";
 import { useId } from "react";
 import css from "./FiltersBlock.module.css";
 import { useFilterData } from "@/lib/store/filterStore";
+import { Icon } from '../ui/Icon/Icon';
 
 interface FiltersBlockValues {
   location: string;
@@ -37,6 +38,7 @@ const FiltersBlock = () => {
 
         <div className={css.locationWrp}>
         <label htmlFor={`${fieldId}-location`}  className={css.locationLabel}>Location</label>
+         <Icon name={'icon-map'} width={20} height={20} />
           <Field as="select" name="location" id={`${fieldId}-location`} className={css.locationInput}>
       <option value="" disabled>Choose a city</option>
       <option value="Ukraine, Kyiv" >Ukraine, Kyiv</option>
@@ -54,22 +56,27 @@ const FiltersBlock = () => {
 
         <div className={css.checkboxItem}>
     <label>
+      <Icon name={'icon-wind'} width={32} height={32} />
           <Field type="checkbox" name="equipment" value="AC" />
           AC
         </label>
         <label>
+          <Icon name={'icon-diagram'} width={32} height={32} />
           <Field type="checkbox" name="equipment" value="automatic" />
           Automatic
         </label>
         <label>
+          <Icon name={'icon-cup-hot'} width={32} height={32} />
           <Field type="checkbox" name="equipment" value="kitchen" />
           Kitchen
         </label>
         <label>
+          <Icon name={'icon-tv'} width={32} height={32} />
           <Field type="checkbox" name="equipment" value="TV" />
           TV
         </label>
         <label>
+          <Icon name={'icon-shower'} width={32} height={32} />
           <Field type="checkbox" name="equipment" value="bathroom" />
           Bathroom
         </label>
@@ -81,14 +88,17 @@ const FiltersBlock = () => {
 
     <div className={css.redioBtnItems}>
        <label>
+        <Icon name={'icon-grid-1x2'} width={32} height={32} />
           <Field type="radio" name="form" value="panelTruck" />
           Van
         </label>
         <label>
+          <Icon name={'icon-grid-2x2'} width={32} height={32} />
           <Field type="radio" name="form" value="fullyIntegrated" />
           Fully Integrated
         </label>
         <label>
+          <Icon name={'icon-grid-3x3'} width={32} height={32} />
           <Field type="radio" name="form" value="alcove" />
           Alcove
         </label>
