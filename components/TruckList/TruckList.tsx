@@ -28,25 +28,53 @@ const TruckList = ({trucks}: TruckListProps) => {
 
     <ul className={css.optionList}>
 
-        {truck.transmission === "automatic" && <li  className={css.optionItem}>         <Icon name={'icon-diagram'} width={20} height={20} />Automatic</li>}
+        {truck.transmission === "automatic" && <li  className={css.optionItem}>        
+            <Icon name={'icon-diagram'} width={20} height={20} />
+            <p>Automatic</p>
+            </li>}
 
-        {truck.AC && <li className={css.optionItem}><Icon name={'icon-wind'} width={20} height={20} />AC</li>}
+        {truck.AC && <li className={css.optionItem}>
+            <Icon name={'icon-wind'} width={20} height={20} />
+            <p>AC</p>
+            </li>}
 
-        {truck.engine === "petrol" && <li className={css.optionItem}><Icon name={"icon-fuel-pump"} width={20} height={20} />Petrol</li>}
+        {truck.engine === "petrol" && <li className={css.optionItem}>
+            <Icon name={"icon-fuel-pump"} width={20} height={20} />
+            <p>Petrol</p>
+            </li>}
 
-        {truck.kitchen && <li className={css.optionItem}><Icon name={"icon-cup-hot"} width={20} height={20} />Kitchen</li>}
+        {truck.kitchen && <li className={css.optionItem}>
+            <Icon name={"icon-cup-hot"} width={20} height={20} />
+            <p>Kitchen</p>
+            </li>}
 
-        {truck.radio && <li className={css.optionItem}><Icon name={"icon-radio"} width={20} height={20} />Radio</li>}
+        {truck.radio && <li className={css.optionItem}>
+            <Icon name={"icon-radio"} width={20} height={20} />
+            <p>Radio</p>
+            </li>}
 
-        {truck.bathroom && <li className={css.optionItem}><Icon name={"icon-shower"} width={20} height={20} />Bathroom</li>}
+        {truck.bathroom && <li className={css.optionItem}>
+            <Icon name={"icon-shower"} width={20} height={20} />
+            <p>Bathroom</p>
+            </li>}
 
-        {truck.refrigerator && <li className={css.optionItem}><Icon name={"icon-fridge"} width={20} height={20} />Refrigerator</li>}
+        {truck.refrigerator && <li className={css.optionItem}>
+            <Icon name={"icon-fridge"} width={20} height={20} />
+            <p>Refrigerator</p></li>}
 
-        {truck.microwave && <li className={css.optionItem}><Icon name={"icon-microwave"} width={20} height={20} color="#FFFFFF"/>Microwave</li>}
+        {truck.microwave && <li className={css.optionItem}>
+            <Icon name={"icon-microwave"} width={20} height={20} color="#FFFFFF"/>
+            <p>Microwave</p>
+            </li>}
 
-        {truck.gas && <li className={css.optionItem}><Icon name={"icon-gas-stove"} width={20} height={20} />Gas</li>}
+        {truck.gas && <li className={css.optionItem}>
+            <Icon name={"icon-gas-stove"} width={20} height={20} />
+            <p>Gas</p>
+            </li>}
 
-        {truck.water && <li className={css.optionItem}><Icon name={"icon-water"} width={20} height={20} />Water</li>}
+        {truck.water && <li className={css.optionItem}>
+            <Icon name={"icon-water"} width={20} height={20} />
+            <p>Water</p></li>}
 
     </ul>
 

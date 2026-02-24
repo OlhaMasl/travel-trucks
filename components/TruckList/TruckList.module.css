@@ -1,10 +1,10 @@
 .truckCard {
     max-width: 888px;
-    max-height: 516px;
     border: 1px solid var(--gray-light);
     border-radius: 20px;
     padding: 24px;
     display: flex;
+
     gap: 24px;
     background-color: #F7F7F7;
     margin-bottom: 32px;
@@ -12,7 +12,6 @@
 
 .imgWrp {
     width: 292px;
-    height: 320px;
     overflow: hidden;
 }
 
@@ -24,7 +23,6 @@ max-width: 100%;
 }
 
 .truckInfo {
-    height: 320px;
     width: 524px;
 }
 
@@ -73,11 +71,22 @@ margin-bottom: 24px;
 }
 
 .optionItem {
-    border-radius: 100px;
+border-radius: 100px;
 padding: 12px 18px;
 height: 48px;
 background: #DADDE1;
 mix-blend-mode: multiply;
+display: flex;
+gap: 8px;
+}
+
+.optionItem p {
+ font-family: var(--font-family);
+font-weight: 500;
+font-size: 16px;
+line-height: 150%;
+text-align: center;
+color: var(--main);   
 }
 
 .btn {
