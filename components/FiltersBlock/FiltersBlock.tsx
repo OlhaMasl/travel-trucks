@@ -54,30 +54,30 @@ const FiltersBlock = () => {
     <div className={css.checkboxWrp}>
         <h2 className={css.checkboxTitle}>Vehicle equipment</h2>
 
-        <div className={css.checkboxItem}>
-    <label>
+        <div className={css.checkboxItems}>
+    <label className={css.checkboxItem}>
       <Icon name={'icon-wind'} width={32} height={32} />
-          <Field type="checkbox" name="equipment" value="AC" />
+          <Field type="checkbox" name="equipment" value="AC"  className={css.visuallyHidden}/>
           AC
         </label>
-        <label>
+        <label className={css.checkboxItem}>
           <Icon name={'icon-diagram'} width={32} height={32} />
-          <Field type="checkbox" name="equipment" value="automatic" />
+          <Field type="checkbox" name="equipment" value="automatic" className={css.visuallyHidden}/>
           Automatic
         </label>
-        <label>
+        <label className={css.checkboxItem}>
           <Icon name={'icon-cup-hot'} width={32} height={32} />
-          <Field type="checkbox" name="equipment" value="kitchen" />
+          <Field type="checkbox" name="equipment" value="kitchen" className={css.visuallyHidden}/>
           Kitchen
         </label>
-        <label>
+        <label className={css.checkboxItem}>
           <Icon name={'icon-tv'} width={32} height={32} />
-          <Field type="checkbox" name="equipment" value="TV" />
+          <Field type="checkbox" name="equipment" value="TV" className={css.visuallyHidden}/>
           TV
         </label>
-        <label>
+        <label className={css.checkboxItem}>
           <Icon name={'icon-shower'} width={32} height={32} />
-          <Field type="checkbox" name="equipment" value="bathroom" />
+          <Field type="checkbox" name="equipment" value="bathroom" className={css.visuallyHidden}/>
           Bathroom
         </label>
         </div>

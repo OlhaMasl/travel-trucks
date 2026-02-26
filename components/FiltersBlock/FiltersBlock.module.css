@@ -42,10 +42,40 @@ line-height: 120%;
 color: #101828; 
 margin-bottom: 24px;
 }
-.checkboxItem {
-    display: grid;
-    gap: 12px;
+.checkboxItems {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px 12px;
+    
 }
+
+.checkboxItem {
+border: 1px solid #DADDE1;
+border-radius: 12px;
+padding: 16px 12px;
+width: 112px;
+height: 96px;
+mix-blend-mode: multiply;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+gap: 8px;
+}
+
+.visuallyHidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+  }
 
 .redioBtnWrp {
     margin-bottom: 40px;
