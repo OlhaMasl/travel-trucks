@@ -38,44 +38,46 @@ const FiltersBlock = () => {
 
         <div className={css.locationWrp}>
         <label htmlFor={`${fieldId}-location`}  className={css.locationLabel}>Location</label>
-         <Icon name={'icon-map'} width={20} height={20} />
-          <Field as="select" name="location" id={`${fieldId}-location`} className={css.locationInput}>
-      <option value="" disabled>Choose a city</option>
-      <option value="Ukraine, Kyiv" >Ukraine, Kyiv</option>
-      <option value="Ukraine, Poltava">Ukraine, Poltava</option>
-      <option value="Ukraine, Dnipro">Ukraine, Dnipro</option>
-      <option value="Ukraine, Odesa">Ukraine, Odesa</option>
-      <option value="Ukraine, Kharkiv">Ukraine, Kharkiv</option>
-      <option value="Ukraine, Sumy">Ukraine, Sumy</option>
-       <option value="Ukraine, Lviv">Ukraine, Lviv</option>
-    </Field>
+        <div className={css.IconFieldWrp}>
+          <Icon name={'icon-map'} width={20} height={20} />
+        <Field as="select" name="location" id={`${fieldId}-location`} className={css.locationInput}>
+            <option value="" disabled>Choose a city</option>
+            <option value="Ukraine, Kyiv" >Ukraine, Kyiv</option>
+            <option value="Ukraine, Poltava">Ukraine, Poltava</option>
+            <option value="Ukraine, Dnipro">Ukraine, Dnipro</option>
+            <option value="Ukraine, Odesa">Ukraine, Odesa</option>
+            <option value="Ukraine, Kharkiv">Ukraine, Kharkiv</option>
+            <option value="Ukraine, Sumy">Ukraine, Sumy</option>
+            <option value="Ukraine, Lviv">Ukraine, Lviv</option>
+          </Field>
+        </div>
     </div>
 
     <div className={css.checkboxWrp}>
         <h2 className={css.checkboxTitle}>Vehicle equipment</h2>
 
         <div className={css.checkboxItems}>
-    <label className={css.checkboxItem}>
+    <label className={css.filterItem }>
       <Icon name={'icon-wind'} width={32} height={32} />
           <Field type="checkbox" name="equipment" value="AC"  className={css.visuallyHidden}/>
           AC
         </label>
-        <label className={css.checkboxItem}>
+        <label className={css.filterItem }>
           <Icon name={'icon-diagram'} width={32} height={32} />
           <Field type="checkbox" name="equipment" value="automatic" className={css.visuallyHidden}/>
           Automatic
         </label>
-        <label className={css.checkboxItem}>
+        <label className={css.filterItem }>
           <Icon name={'icon-cup-hot'} width={32} height={32} />
           <Field type="checkbox" name="equipment" value="kitchen" className={css.visuallyHidden}/>
           Kitchen
         </label>
-        <label className={css.checkboxItem}>
+        <label className={css.filterItem }>
           <Icon name={'icon-tv'} width={32} height={32} />
           <Field type="checkbox" name="equipment" value="TV" className={css.visuallyHidden}/>
           TV
         </label>
-        <label className={css.checkboxItem}>
+        <label className={css.filterItem }>
           <Icon name={'icon-shower'} width={32} height={32} />
           <Field type="checkbox" name="equipment" value="bathroom" className={css.visuallyHidden}/>
           Bathroom
@@ -87,22 +89,26 @@ const FiltersBlock = () => {
     <h2 className={css.redioBtnTitle}>Vehicle type</h2>
 
     <div className={css.redioBtnItems}>
-       <label>
+
+       <label className={css.filterItem }>
         <Icon name={'icon-grid-1x2'} width={32} height={32} />
-          <Field type="radio" name="form" value="panelTruck" />
+          <Field type="radio" name="form" value="panelTruck" className={css.visuallyHidden}/>
           Van
         </label>
-        <label>
+
+        <label className={css.filterItem }>
           <Icon name={'icon-grid-2x2'} width={32} height={32} />
-          <Field type="radio" name="form" value="fullyIntegrated" />
-          Fully Integrated
+          <Field type="radio" name="form" value="fullyIntegrated" className={css.visuallyHidden}/>
+          Fully <span>Integrated</span>
         </label>
-        <label>
+
+        <label className={css.filterItem }>
           <Icon name={'icon-grid-3x3'} width={32} height={32} />
-          <Field type="radio" name="form" value="alcove" />
+          <Field type="radio" name="form" value="alcove" className={css.visuallyHidden}/>
           Alcove
         </label>
-        </div>
+
+    </div>
 </div>
 
 
