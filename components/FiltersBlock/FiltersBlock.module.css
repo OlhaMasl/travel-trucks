@@ -59,13 +59,24 @@ font-weight: 600;
 font-size: 20px;
 line-height: 120%;
 color: #101828; 
-margin-bottom: 24px;
+margin-bottom: 48px;
 }
 .checkboxItems {
     display: flex;
     flex-wrap: wrap;
     gap: 8px 12px;
+    position: relative;
     
+}
+
+.checkboxItems::before {
+    content: "";
+  position: absolute;
+  top: -24px;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background-color: #DADDE1;
 }
 
 .filterItem {
@@ -96,6 +107,10 @@ gap: 8px;
     overflow: hidden;
   }
 
+  .filterItem:has(input:checked) {
+  border: 1px solid #D84343;
+}
+
 .redioBtnWrp {
     margin-bottom: 40px;
 }
@@ -105,11 +120,22 @@ font-weight: 600;
 font-size: 20px;
 line-height: 120%;
 color: #101828;
-margin-bottom: 24px;
+margin-bottom: 48px;
 }
 .redioBtnItems{
     display: flex;
     gap: 12px;
+    position: relative;
+}
+
+.redioBtnItems::before {
+content: "";
+  position: absolute;
+  top: -24px;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background-color: #DADDE1;
 }
 
 .submitBtn {
@@ -117,5 +143,8 @@ border-radius: 200px;
 padding: 16px 60px;
 width: 166px;
 height: 56px;
-background-color: #D84343;
+background-color: #E44848;
+}
+.submitBtn:focus:hover {
+  background-color: #D84343;  
 }
